@@ -4,7 +4,7 @@ from phase1.detector.grounding_dino_detector import GroundingDINODetector
 from phase1.utils.visualization import draw_boxes
 
 # Load image
-image_path = "test.jpg"  # tree / glass / makeup brush
+image_path = "test.jpeg"  # tree / glass / makeup brush
 image = cv2.imread(image_path)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
@@ -14,7 +14,7 @@ detector = GroundingDINODetector()
 # Detect objects
 detections = detector.detect(
     image=image,
-    prompt="an object",
+    prompt="all objects in the scene",
     box_threshold=0.3
 )
 
